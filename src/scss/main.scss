@@ -130,6 +130,8 @@ nav a{
 	
 	@include bp-desktop{
 		background: contain;
+		display: flex;
+		flex-direction: column;
 	}
 }
 
@@ -166,8 +168,22 @@ nav a{
 	}
 }
 
+.about-me{
+	background: white;
+	padding: 20px 25px;
+	width: 428px;
+	height: 200px;
+	position: relative;
 
+	@include bp-desktop{
+	border-top-style: 1px #C6C6C6 solid;
+	border-right-style: 1px #C6C6C6 solid;
+	align-self: flex-end;
+	margin-top: auto;
+	}
+}
 
 .blurb-pic{
-	opacity: 0;
+	width: 126px;
+	height: 126px;
 }
