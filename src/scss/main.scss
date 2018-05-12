@@ -149,9 +149,8 @@ nav a{
 	@include bp-desktop{
 		width: 650px;
 	}
-}
 
-.hero-statement h1{
+	h1{
 	padding: 25px 35px;
 	background-color: transparent;
 	font-size: 2.15em;
@@ -162,9 +161,8 @@ nav a{
 	@include bp-desktop{
 		font-size: 3em;
 	}
-}
 
-.hero-statement span{
+	span{
 	font-size: 150px;
 	padding: 0px;	
 
@@ -201,21 +199,38 @@ nav a{
 	display: flex;
 	flex-direction: column;
 	padding-left: 15px;
+	justify-content: space-evenly;
+
+	h2{
+		flex: 1;
+	}
+
+	.title{
+		flex: 2;
+	}
+
+	p{
+		font-family: 'arial';
+		font-size: 16px;
+	}
+
+	a{
+		color: $redColor;
+		text-decoration: none;
+		font-family: 'arial';
+		font-size: 16px;
+		flex-basis: 60%;
+	}
 
 	@include bp-desktop{
 		font-size: 30px;
 	}
 }
 
-.gelli-statement p{
-	color: $redColor;
-	text-decoration: none;
-	font-family: 'arial';
-	font-size: 16px;
-}
+.line-break{
+	display: block;
 
-.gelli-statement p.span{
-    white-space: pre-wrap;
-    word-wrap: break-word;
+	@include bp-desktop{
+		display: inline-block;
+	}
 }
-

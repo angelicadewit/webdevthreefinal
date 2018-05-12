@@ -213,13 +213,13 @@ nav a.active {
 	}
 }
 
-.hero-statement span {
+.hero-statement h1 span {
 	font-size: 150px;
 	padding: 0px;
 }
 
 @media only screen and (min-width: 960px) {
-	.hero-statement span {
+	.hero-statement h1 span {
 		font-size: 120px;
 	}
 }
@@ -254,6 +254,28 @@ nav a.active {
 	display: flex;
 	flex-direction: column;
 	padding-left: 15px;
+	justify-content: space-evenly;
+}
+
+.gelli-statement h2 {
+	flex: 1;
+}
+
+.gelli-statement .title {
+	flex: 2;
+}
+
+.gelli-statement p {
+	font-family: 'arial';
+	font-size: 16px;
+}
+
+.gelli-statement a {
+	color: #C40000;
+	text-decoration: none;
+	font-family: 'arial';
+	font-size: 16px;
+	flex-basis: 60%;
 }
 
 @media only screen and (min-width: 960px) {
@@ -262,16 +284,14 @@ nav a.active {
 	}
 }
 
-.gelli-statement p {
-	color: #C40000;
-	text-decoration: none;
-	font-family: 'arial';
-	font-size: 16px;
+.line-break {
+	display: block;
 }
 
-.gelli-statement p.span {
-	white-space: pre-wrap;
-	word-wrap: break-word;
+@media only screen and (min-width: 960px) {
+	.line-break {
+		display: inline-block;
+	}
 }
 
 /*# sourceMappingURL=main.css.map */
