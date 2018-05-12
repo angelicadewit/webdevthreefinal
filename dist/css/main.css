@@ -112,6 +112,10 @@ header {
 	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 );
 	/* IE6-9 */
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+	z-index: 5;
 }
 
 @media only screen and (min-width: 960px) {
@@ -169,7 +173,7 @@ nav a.active {
 
 .home .hero {
 	background: url("/dist/img/aboutcherryblossom.jpg");
-	height: 460px;
+	height: 500px;
 }
 
 @media only screen and (min-width: 960px) {
@@ -177,6 +181,7 @@ nav a.active {
 		background: contain;
 		display: flex;
 		flex-direction: column;
+		height: 460px;
 	}
 }
 
@@ -222,13 +227,16 @@ nav a.active {
 .about-me {
 	background: white;
 	padding: 20px 25px;
-	width: 428px;
-	height: 200px;
+	width: 480px;
+	top: 90px;
+	margin-left: auto;
 	position: relative;
+	display: flex;
 }
 
 @media only screen and (min-width: 960px) {
 	.about-me {
+		top: 0px;
 		border-top-style: 1px #C6C6C6 solid;
 		border-right-style: 1px #C6C6C6 solid;
 		align-self: flex-end;
@@ -239,6 +247,31 @@ nav a.active {
 .blurb-pic {
 	width: 126px;
 	height: 126px;
+}
+
+.gelli-statement {
+	font-size: 25px;
+	display: flex;
+	flex-direction: column;
+	padding-left: 15px;
+}
+
+@media only screen and (min-width: 960px) {
+	.gelli-statement {
+		font-size: 30px;
+	}
+}
+
+.gelli-statement p {
+	color: #C40000;
+	text-decoration: none;
+	font-family: 'arial';
+	font-size: 16px;
+}
+
+.gelli-statement p.span {
+	white-space: pre-wrap;
+	word-wrap: break-word;
 }
 
 /*# sourceMappingURL=main.css.map */
