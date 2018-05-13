@@ -21,6 +21,7 @@ $redColor: #C40000;
 
 $column-1-1: 100%;
 $column-1-3: 1 / 3 * 100%;
+$column-1-2: 1 / 2 * 100%;
 
 $desktop-breakpoint: 960px;
 
@@ -29,6 +30,24 @@ $desktop-breakpoint: 960px;
 		@content;
 	}
 }
+
+@mixin links{
+	color: $redColor;
+	text-decoration: none;
+	font-family: 'arial';
+	font-size: 16px;
+}
+
+.pic-size{
+	width: 126px;
+	height: 126px;
+}
+
+.mini-pic-size{
+	width: 81px;
+	height: 81px;
+}
+
 
 
 /* 1. Main Layout ================================= */
@@ -40,6 +59,7 @@ $desktop-breakpoint: 960px;
 body {
 	background-color: #424242;
 	font-family: 'Arvo', 'arial', serif;
+	transition: 2s ease-in;
 }
 
 .wrapper{
@@ -56,7 +76,7 @@ body {
 
 /* 2. Content ================================= */
 
-// Home
+// Header
 
 ul, nav{
 	display: flex;
@@ -128,6 +148,26 @@ nav a{
 	}
 }
 
+// FOOTER
+
+footer {
+	background: black;
+	color: white;
+	padding: 20px;
+	font-family: "arial", sans-serif;
+}
+
+footer a{
+	@include links;
+}
+
+
+
+
+
+
+// HOME
+
 .home .hero{
 	background: url('/dist/img/aboutcherryblossom.jpg');
 	height: 500px;
@@ -158,18 +198,21 @@ nav a{
 	display: flex;
 	align-content: center;
 
-	@include bp-desktop{
-		font-size: 3em;
+		@include bp-desktop{
+			font-size: 3em;
+		}
 	}
 
 	span{
 	font-size: 150px;
 	padding: 0px;	
 
-	@include bp-desktop{
-		font-size: 120px;
+		@include bp-desktop{
+			font-size: 120px;
+		}
 	}
 }
+
 
 .about-me{
 	background: white;
@@ -189,11 +232,6 @@ nav a{
 	}
 }
 
-.blurb-pic{
-	width: 126px;
-	height: 126px;
-}
-
 .gelli-statement{
 	font-size: 25px;
 	display: flex;
@@ -202,7 +240,7 @@ nav a{
 	justify-content: space-evenly;
 
 	h2{
-		flex: 1;
+		flex: 1.5;
 	}
 
 	.title{
@@ -215,10 +253,7 @@ nav a{
 	}
 
 	a{
-		color: $redColor;
-		text-decoration: none;
-		font-family: 'arial';
-		font-size: 16px;
+		@include links;
 		flex-basis: 60%;
 	}
 
@@ -232,5 +267,110 @@ nav a{
 
 	@include bp-desktop{
 		display: inline-block;
+	}
+}
+
+.two-col{
+
+	@include bp-desktop{
+		display: flex;
+		flex-direction: row;
+	}
+}
+
+aside{
+	@include bp-desktop{
+		width: $column-1-2;
+	}
+}
+
+.third-quarter{
+	background-color: white;
+	border-top: 1px #C6C6C6 solid;
+	border-right: 1px #C6C6C6 solid;
+
+	@include bp-desktop{
+		height: 425px;
+	}
+
+	h2{
+		background: black;
+		color: white;
+		font-size: 30px;
+		padding: 15px 30px;
+	}
+
+	span{
+		font-weight: bolder;
+	}
+
+	img{
+		border: 1px solid black;
+		margin-bottom: 20px;
+	}
+
+	.testimonial{
+		margin-bottom: 25px;
+	}
+
+	.testimonial-pics{
+		display: flex;
+		justify-content: space-around;
+		
+		li{
+			flex: 0;
+
+			@include bp-desktop{
+				padding-right: 10px;
+			}
+		}
+	}
+
+	.blurb{
+		padding: 15px 5px;
+		font-family: Arial, Helvetica, sans-serif;
+		display: flex;
+		flex-direction: column;
+
+		@include bp-desktop{
+			padding: 15px 30px;
+			align-items: flex-start;
+		}
+	}
+
+	.testimonial-link{
+		@include links;
+	}
+
+}
+
+.course{
+	padding-top: 20px;
+	padding-left: 20px;
+	display: flex;
+
+	h3{
+		font-size: 18px;
+		color: white;
+		padding-bottom: 5px;
+	}
+
+	p{
+		font-size: 15px;
+		font-family: 'arial';
+		color: white;
+		margin-right: 40px;
+	}
+
+	img{
+		margin-right: 13px;
+	}
+
+	&:last-child{
+		margin-bottom: 20px;
+
+		@include bp-desktop{
+			margin-bottom: 0px;
+		}
 	}
 }

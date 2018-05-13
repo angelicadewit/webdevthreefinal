@@ -67,6 +67,16 @@ table {
 	border-spacing: 0;
 }
 
+.pic-size {
+	width: 126px;
+	height: 126px;
+}
+
+.mini-pic-size {
+	width: 81px;
+	height: 81px;
+}
+
 /* 1. Main Layout ================================= */
 * {
 	box-sizing: border-box;
@@ -75,6 +85,7 @@ table {
 body {
 	background-color: #424242;
 	font-family: 'Arvo', 'arial', serif;
+	transition: 2s ease-in;
 }
 
 @media only screen and (min-width: 960px) {
@@ -171,6 +182,20 @@ nav a.active {
 	background: #000;
 }
 
+footer {
+	background: black;
+	color: white;
+	padding: 20px;
+	font-family: "arial", sans-serif;
+}
+
+footer a {
+	color: #C40000;
+	text-decoration: none;
+	font-family: 'arial';
+	font-size: 16px;
+}
+
 .home .hero {
 	background: url("/dist/img/aboutcherryblossom.jpg");
 	height: 500px;
@@ -213,13 +238,13 @@ nav a.active {
 	}
 }
 
-.hero-statement h1 span {
+.hero-statement span {
 	font-size: 150px;
 	padding: 0px;
 }
 
 @media only screen and (min-width: 960px) {
-	.hero-statement h1 span {
+	.hero-statement span {
 		font-size: 120px;
 	}
 }
@@ -244,11 +269,6 @@ nav a.active {
 	}
 }
 
-.blurb-pic {
-	width: 126px;
-	height: 126px;
-}
-
 .gelli-statement {
 	font-size: 25px;
 	display: flex;
@@ -258,7 +278,7 @@ nav a.active {
 }
 
 .gelli-statement h2 {
-	flex: 1;
+	flex: 1.5;
 }
 
 .gelli-statement .title {
@@ -291,6 +311,120 @@ nav a.active {
 @media only screen and (min-width: 960px) {
 	.line-break {
 		display: inline-block;
+	}
+}
+
+@media only screen and (min-width: 960px) {
+	.two-col {
+		display: flex;
+		flex-direction: row;
+	}
+}
+
+@media only screen and (min-width: 960px) {
+	aside {
+		width: 50%;
+	}
+}
+
+.third-quarter {
+	background-color: white;
+	border-top: 1px #C6C6C6 solid;
+	border-right: 1px #C6C6C6 solid;
+}
+
+@media only screen and (min-width: 960px) {
+	.third-quarter {
+		height: 425px;
+	}
+}
+
+.third-quarter h2 {
+	background: black;
+	color: white;
+	font-size: 30px;
+	padding: 15px 30px;
+}
+
+.third-quarter span {
+	font-weight: bolder;
+}
+
+.third-quarter img {
+	border: 1px solid black;
+	margin-bottom: 20px;
+}
+
+.third-quarter .testimonial {
+	margin-bottom: 25px;
+}
+
+.third-quarter .testimonial-pics {
+	display: flex;
+	justify-content: space-around;
+}
+
+.third-quarter .testimonial-pics li {
+	flex: 0;
+}
+
+@media only screen and (min-width: 960px) {
+	.third-quarter .testimonial-pics li {
+		padding-right: 10px;
+	}
+}
+
+.third-quarter .blurb {
+	padding: 15px 5px;
+	font-family: Arial, Helvetica, sans-serif;
+	display: flex;
+	flex-direction: column;
+}
+
+@media only screen and (min-width: 960px) {
+	.third-quarter .blurb {
+		padding: 15px 30px;
+		align-items: flex-start;
+	}
+}
+
+.third-quarter .testimonial-link {
+	color: #C40000;
+	text-decoration: none;
+	font-family: 'arial';
+	font-size: 16px;
+}
+
+.course {
+	padding-top: 20px;
+	padding-left: 20px;
+	display: flex;
+}
+
+.course h3 {
+	font-size: 18px;
+	color: white;
+	padding-bottom: 5px;
+}
+
+.course p {
+	font-size: 15px;
+	font-family: 'arial';
+	color: white;
+	margin-right: 40px;
+}
+
+.course img {
+	margin-right: 13px;
+}
+
+.course:last-child {
+	margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 960px) {
+	.course:last-child {
+		margin-bottom: 0px;
 	}
 }
 
