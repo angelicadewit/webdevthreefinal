@@ -210,7 +210,7 @@ footer a {
 	}
 }
 
-.hero-statement {
+.home .hero-statement {
 	background-color: rgba(0, 0, 0, 0.6);
 	position: relative;
 	top: 50px;
@@ -218,12 +218,12 @@ footer a {
 }
 
 @media only screen and (min-width: 960px) {
-	.hero-statement {
+	.home .hero-statement {
 		width: 650px;
 	}
 }
 
-.hero-statement h1 {
+.home .hero-statement h1 {
 	padding: 25px 35px;
 	background-color: transparent;
 	font-size: 2.15em;
@@ -233,18 +233,18 @@ footer a {
 }
 
 @media only screen and (min-width: 960px) {
-	.hero-statement h1 {
+	.home .hero-statement h1 {
 		font-size: 3em;
 	}
 }
 
-.hero-statement span {
+.home .hero-statement span {
 	font-size: 150px;
 	padding: 0px;
 }
 
 @media only screen and (min-width: 960px) {
-	.hero-statement span {
+	.home .hero-statement span {
 		font-size: 120px;
 	}
 }
@@ -425,6 +425,30 @@ footer a {
 @media only screen and (min-width: 960px) {
 	.course:last-child {
 		margin-bottom: 0px;
+	}
+}
+
+.resources .hero {
+	background: url("../img/resourcesbg.jpg");
+	background-size: cover;
+	height: 275px;
+	background-position-y: 50%;
+}
+
+.resources .hero-statement h1 {
+	background-color: none;
+	font-size: 3.25em;
+	color: white;
+	text-shadow: 0px 0px 15px #969696;
+	position: relative;
+	top: 50px;
+	width: 400px;
+	padding: 25px 35px;
+}
+
+@media only screen and (min-width: 960px) {
+	.resources .hero-statement h1 {
+		font-size: 3.25em;
 	}
 }
 

@@ -48,6 +48,20 @@ $desktop-breakpoint: 960px;
 	height: 81px;
 }
 
+@mixin other-page-hero-h1{
+	background-color: none;
+	font-size: 3.25em;
+	color: white;
+	text-shadow: 0px 0px 15px rgba(150, 150, 150, 1);
+	position: relative;
+	top: 50px;
+	width: 400px;
+	padding: 25px 35px;
+
+	@include bp-desktop{
+		font-size: 3.25em;
+	}
+}
 
 
 /* 1. Main Layout ================================= */
@@ -164,8 +178,6 @@ footer a{
 
 
 
-
-
 // HOME
 
 .home .hero{
@@ -180,7 +192,7 @@ footer a{
 	}
 }
 
-.hero-statement{
+.home .hero-statement{
 	background-color: rgba(0,0,0,0.6);
 	position: relative;
 	top: 50px;
@@ -373,4 +385,22 @@ aside{
 			margin-bottom: 0px;
 		}
 	}
+}
+
+// resources
+
+//
+.resources {
+
+	.hero {
+		background: url('../img/resourcesbg.jpg');
+		background-size: cover;
+		height: 275px;
+		background-position-y: 50%;
+	}
+
+	.hero-statement h1{
+		@include other-page-hero-h1;
+	}
+	
 }
