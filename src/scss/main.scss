@@ -431,6 +431,7 @@ aside{
 	margin: 20px;
 	@include bp-desktop{
 		display: flex;
+		margin-bottom: 0px;
 	}
 }
 
@@ -482,7 +483,6 @@ aside{
 .link-box{
 	background-color: $resourceBoxColor;
 	z-index: 2;
-	width: 95%;
 	margin: auto;
 	height: 377px;
 	margin-bottom: 25px;
@@ -492,6 +492,7 @@ aside{
 		width: 299px;
 		height: 380px;
 		padding-right: 10px;
+		margin-bottom: 0px;
 	}
 
 	h2{
@@ -519,8 +520,29 @@ aside{
 }
 
 .second-row{
+	@extend .first-row;
 
 	@include bp-desktop{
-		display: flex
+		margin-top: 0px;
+	}
+
+	
+	.link-box{
+		@include bp-desktop{
+			margin: 0px;
+
+			&:not(:last-child){
+				margin-right: 11px;
+			}
+		}
+	}
+}
+
+footer{
+
+	@include bp-desktop{
+		z-index: 1;
+		position: relative;
+		margin-top: -10px;
 	}
 }
