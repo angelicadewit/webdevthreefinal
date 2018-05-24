@@ -463,6 +463,10 @@ footer a {
 	font-size: 30px;
 }
 
+.first-row {
+	margin: 20px;
+}
+
 @media only screen and (min-width: 960px) {
 	.first-row {
 		display: flex;
@@ -471,18 +475,20 @@ footer a {
 
 .image-box {
 	z-index: 2;
-	width: 95%;
 	margin: auto;
 	margin-top: -80px;
 	-webkit-box-shadow: 0px 0px 49px -1px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow: 0px 0px 49px -1px rgba(0, 0, 0, 0.75);
 	box-shadow: 0px 0px 49px -1px rgba(0, 0, 0, 0.75);
 	background: white;
+	margin-bottom: 22px;
 }
 
 @media only screen and (min-width: 960px) {
 	.image-box {
-		width: 611px;
+		width: 616px;
+		margin-right: 10px;
+		height: 380px;
 	}
 }
 
@@ -493,7 +499,7 @@ footer a {
 }
 
 .image-box h2 {
-	padding: 20px 25px;
+	padding: 20px;
 	text-align: center;
 }
 
@@ -514,7 +520,53 @@ footer a {
 
 @media only screen and (min-width: 960px) {
 	.image-box p {
-		padding-bottom: 50px;
+		padding-bottom: 39px;
+	}
+}
+
+.link-box {
+	background-color: #262525;
+	z-index: 2;
+	width: 95%;
+	margin: auto;
+	height: 377px;
+	margin-bottom: 25px;
+	padding: 20px 25px;
+}
+
+@media only screen and (min-width: 960px) {
+	.link-box {
+		width: 299px;
+		height: 380px;
+		padding-right: 10px;
+	}
+}
+
+.link-box h2 {
+	font-size: 30px;
+	color: white;
+	margin-bottom: 30px;
+}
+
+.link-box a,
+.link-box p {
+	color: white;
+	font-family: arial;
+}
+
+.link-box .description {
+	margin-bottom: 25px;
+}
+
+@media only screen and (min-width: 960px) {
+	.first-box {
+		margin-top: -80px;
+	}
+}
+
+@media only screen and (min-width: 960px) {
+	.second-row {
+		display: flex;
 	}
 }
 
