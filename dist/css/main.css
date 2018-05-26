@@ -647,8 +647,8 @@ article {
 
 @media only screen and (min-width: 960px) {
 	article {
-		flex-grow: 2;
 		margin-bottom: 40px;
+		margin-right: 10px;
 	}
 }
 
@@ -674,6 +674,14 @@ article h3 {
 	padding: 20px 30px;
 }
 
+@media only screen and (min-width: 960px) {
+	.work aside {
+		margin-left: 0px;
+		height: 430px;
+		margin-top: -65px;
+	}
+}
+
 .work aside h2 {
 	margin-bottom: 30px;
 }
@@ -685,15 +693,19 @@ article h3 {
 
 .work aside p {
 	margin-bottom: 15px;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.2em;
 }
 
 .work aside .workimg {
 	border: 5px solid white;
 }
 
-.work aside p {
-	font-family: Arial, Helvetica, sans-serif;
-	line-height: 1.2em;
+@media only screen and (min-width: 960px) {
+	.work aside .workimg {
+		width: 118px;
+		height: 118px;
+	}
 }
 
 /*# sourceMappingURL=main.css.map */

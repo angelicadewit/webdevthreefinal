@@ -403,6 +403,7 @@ aside{
 
 	img{
 		margin-right: 13px;
+		@include mini-pic-size;
 	}
 
 	&:last-child{
@@ -595,8 +596,8 @@ article{
 	padding: 25px;
 
 	@include bp-desktop{
-		flex-grow: 2;
 		margin-bottom: 40px;
+		margin-right: 10px;
 	}
 
 	h2{
@@ -621,6 +622,12 @@ article{
 	margin: 20px 30px;
 	padding: 20px 30px;
 
+	@include bp-desktop{
+		margin-left: 0px;
+		height: 430px;
+		margin-top: -65px;
+	}
+
 	h2{
 		margin-bottom: 30px;
 	}
@@ -632,14 +639,16 @@ article{
 
 	p{
 		margin-bottom: 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		line-height: 1.2em;
 	}
 
 	.workimg{
 		border: 5px solid white;
-	}
 
-	p{
-		font-family: Arial, Helvetica, sans-serif;
-		line-height: 1.2em;
+		@include bp-desktop{
+			width: 118px;
+			height: 118px;
+		}
 	}
 }
