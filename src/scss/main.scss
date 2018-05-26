@@ -538,11 +538,52 @@ aside{
 	}
 }
 
-footer{
-
+.resources footer{
 	@include bp-desktop{
 		z-index: 1;
 		position: relative;
 		margin-top: -10px;
 	}
+}
+
+// work
+
+.work {
+	.hero {
+		background: url('../img/workimg.jpg');
+		background-size: cover;
+		height: 275px;
+		background-position-y: 50%;
+	}
+
+	.hero-statement {
+		margin-top: -20px;
+
+		h1{
+			@include other-page-hero-h1;
+			padding: 0px 35px 0px;
+			font-size: 3em;
+			width: 100%;
+
+			span{
+				text-transform: uppercase;
+				margin-bottom: 0px;
+				color: white;
+			}
+		}
+	}
+
+	.wrapper{
+		background-color: $subPagesWrapper;
+	}
+
+	h2{
+		font-size: 30px;
+	}
+}
+
+article{
+	background: rgba(255,255,255,.6);
+	margin-top: -65px;
+	padding: 0px 25px 25px 25px;
 }
