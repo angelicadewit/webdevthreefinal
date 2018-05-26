@@ -614,3 +614,32 @@ article{
 		line-height: 1.3em;
 	}
 }
+
+.work aside{
+	background: $resourceBoxColor;
+	color: white;
+	margin: 20px 30px;
+	padding: 20px 30px;
+
+	h2{
+		margin-bottom: 30px;
+	}
+
+	h4{
+		font-size: 24px;
+		margin-bottom: 15px;
+	}
+
+	p{
+		margin-bottom: 15px;
+	}
+
+	.workimg{
+		border: 5px solid white;
+	}
+
+	p{
+		font-family: Arial, Helvetica, sans-serif;
+		line-height: 1.2em;
+	}
+}
