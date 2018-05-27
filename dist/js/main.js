@@ -1,4 +1,13 @@
 "use strict";
 
-console.log("Hello World from app.js! \nChange this message, and make sure it changes in the browser \nto verify that you're working in the right files.");
+document.querySelector(".accordion").addEventListener("click", function () {
+    var panel = document.querySelector(".panel");
+    if (panel.classList.contains("close")) {
+        panel.classList.add("open");
+        panel.classList.remove("close");
+    } else {
+        panel.classList.add("close");
+        panel.classList.remove("add");
+    }
+});
 //# sourceMappingURL=main.js.map

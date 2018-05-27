@@ -1,3 +1,12 @@
-console.log(`Hello World from app.js! 
-Change this message, and make sure it changes in the browser 
-to verify that you're working in the right files.`)
+
+
+document.querySelector(".accordion").addEventListener("click", function(){
+    const panel = document.querySelector(".panel")
+    if (panel.classList.contains("close")){
+        panel.classList.add("open");
+        panel.classList.remove("close");
+    } else {
+        panel.classList.add("close");
+        panel.classList.remove("add");
+    }
+})
