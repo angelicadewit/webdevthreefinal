@@ -679,7 +679,7 @@ article h3 {
 @media only screen and (min-width: 960px) {
 	.work aside {
 		margin-left: 0px;
-		overflow: hidden;
+		height: fit-content;
 		margin-top: -65px;
 	}
 }
@@ -717,6 +717,7 @@ article h3 {
 	.work aside .workimg {
 		width: 118px;
 		height: 118px;
+		margin-right: 14px;
 	}
 }
 
@@ -728,9 +729,16 @@ article h3 {
 }
 
 @media only screen and (min-width: 960px) {
+	.about-angelica span {
+		display: inline-block;
+	}
+}
+
+@media only screen and (min-width: 960px) {
 	.title {
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 	}
 }
 

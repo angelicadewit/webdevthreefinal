@@ -629,7 +629,7 @@ article{
 
 	@include bp-desktop{
 		margin-left: 0px;
-		overflow: hidden;
+		height: fit-content;
 		margin-top: -65px;
 	}
 
@@ -662,6 +662,7 @@ article{
 		@include bp-desktop{
 			width: 118px;
 			height: 118px;
+			margin-right: 14px;
 		}
 	}
 }
@@ -671,11 +672,18 @@ article{
 		display: flex;
 		flex-direction: row;
 	}
+
+	span{
+		@include bp-desktop{
+			display: inline-block;
+		}
+	}
 }
 
 .title{
 	@include bp-desktop{
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 	}
 }
