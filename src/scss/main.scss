@@ -526,6 +526,10 @@ aside{
 		padding: 0px 25px 20px;
 		font-family: "arial";
 
+		.quote{
+			font-style: italic;
+		}
+
 		@include bp-desktop{
 		padding-bottom: 39px;
 		}

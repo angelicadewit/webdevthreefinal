@@ -527,6 +527,10 @@ footer a {
 	font-family: "arial";
 }
 
+.image-box p .quote {
+	font-style: italic;
+}
+
 @media only screen and (min-width: 960px) {
 	.image-box p {
 		padding-bottom: 39px;
