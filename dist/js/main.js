@@ -7,7 +7,7 @@ document.querySelector(".accordion").addEventListener("click", function () {
         panel.classList.remove("close");
     } else {
         panel.classList.add("close");
-        panel.classList.remove("add");
+        panel.classList.remove("open");
     }
 });
 //# sourceMappingURL=main.js.map

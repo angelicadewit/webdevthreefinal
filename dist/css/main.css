@@ -643,7 +643,7 @@ footer a {
 
 article {
 	background: rgba(255, 255, 255, 0.6);
-	margin: -65px 30px 0px;
+	margin: -85px 30px 0px;
 	padding: 25px;
 }
 
@@ -680,7 +680,7 @@ article h3 {
 	.work aside {
 		margin-left: 0px;
 		height: fit-content;
-		margin-top: -65px;
+		margin-top: -85px;
 	}
 }
 
@@ -788,8 +788,8 @@ article h3 {
 }
 
 .about .accordion {
-	background-color: #eee;
-	color: #444;
+	background-color: #262525;
+	color: #eee;
 	cursor: pointer;
 	padding: 18px;
 	width: 100%;
@@ -799,8 +799,13 @@ article h3 {
 	transition: 0.4s;
 }
 
+.about .accordion h2 {
+	font-family: arvo;
+}
+
 .about .accordion:active, .about .accordion:hover {
 	background-color: #ccc;
+	background: #262525;
 }
 
 @media only screen and (min-width: 960px) {
@@ -817,8 +822,29 @@ article h3 {
 	display: none;
 }
 
+@media only screen and (min-width: 960px) {
+	.about .close {
+		display: block;
+	}
+}
+
 .about article {
 	margin: 0px 20px 20px;
+}
+
+.about article a {
+	color: #C40000;
+	text-decoration: none;
+	font-family: 'arial';
+	font-size: 16px;
+}
+
+@media only screen and (min-width: 960px) {
+	.about article {
+		margin-top: -85px;
+		margin-bottom: 40px;
+		flex: 90%;
+	}
 }
 
 .panel {
@@ -864,10 +890,23 @@ article h3 {
 	padding-bottom: 25px;
 }
 
+.panel a {
+	color: #C40000;
+	text-decoration: none;
+	font-family: 'arial';
+	font-size: 16px;
+}
+
 @media only screen and (min-width: 960px) {
 	.panel {
 		display: block;
+		margin-top: -85px;
 	}
+}
+
+.panel p.bordered {
+	border-bottom: 1px #888 solid;
+	padding-bottom: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */

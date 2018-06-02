@@ -634,7 +634,7 @@ aside{
 
 article{
 	background: rgba(255,255,255,.6);
-	margin: -65px 30px 0px;
+	margin: -85px 30px 0px;
 	padding: 25px;
 
 	@include bp-desktop{
@@ -667,7 +667,7 @@ article{
 	@include bp-desktop{
 		margin-left: 0px;
 		height: fit-content;
-		margin-top: -65px;
+		margin-top: -85px;
 	}
 
 	h2{
@@ -757,8 +757,8 @@ article{
 	}
 
 	.accordion {
-		background-color: #eee;
-		color: #444;
+		background-color: $resourceBoxColor;
+		color: #eee;
 		cursor: pointer;
 		padding: 18px;
 		width: 100%;
@@ -766,9 +766,14 @@ article{
 		border: none;
 		outline: none;
 		transition: 0.4s;
+		
+		h2{
+			font-family: arvo;
+		}
 
 		&:active, &:hover {
 			background-color: #ccc;
+			background: $resourceBoxColor;
 		}
 
 		@include bp-desktop{
@@ -779,13 +784,31 @@ article{
 	.open{
 		display: block;
 	}
-
+	
 	.close{
 		display: none;
 	}
 
+	@include bp-desktop{
+		.close{
+			display: block;
+		}
+		
+	}
+
 	article{
 		margin: 0px 20px 20px;
+		
+		a{
+			@include links;
+		}
+
+		@include bp-desktop{
+			margin-top: -85px;
+			margin-bottom: 40px;
+			flex: 90%;
+		}
+
 	}
 }
 
@@ -795,7 +818,17 @@ article{
 	display: none;
 	overflow: hidden;
 
+	a {
+		@include links;
+	}
+
 	@include bp-desktop{
 		display: block;
+		margin-top: -85px;
+	}
+
+	p.bordered{
+		border-bottom: 1px #888 solid;
+		padding-bottom: 10px;
 	}
 }
