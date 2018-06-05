@@ -51,7 +51,7 @@ $desktop-breakpoint: 960px;
 .mini-pic-size{
 	width: 81px;
 	height: 81px;
-	flex: 1;
+	flex-basis: 81px;
 }
 
 @mixin mini-pic-size{
@@ -195,10 +195,9 @@ header .logo{
 	font-size: 30px;
 	text-transform: uppercase;
 	font-weight: bold;
-	padding: 20px 40px;
+	padding: 20px;
 	color: $h1Color;
 	text-align: center;
-	margin-bottom: 20px;
 	text-decoration: none;
 
 	@include bp-desktop{
@@ -208,8 +207,12 @@ header .logo{
 	}
 }	
 
-.logo span{
+.logo span,{
 	color: $spanColor;
+}
+
+.hero-statement span{
+	color: $spanColor;	
 }
 
 li{
@@ -449,9 +452,14 @@ aside{
 		margin-right: 40px;
 	}
 
-	img{
+	.image{
 		margin-right: 13px;
 		@include mini-pic-size;
+		flex-basis: 81px;
+	}
+
+	img{
+		width: 81px;
 	}
 
 	&:last-child{
@@ -771,7 +779,6 @@ article{
 		text-align: left;
 		border: none;
 		outline: none;
-		transition: 0.4s;
 		
 		h2{
 			font-family: arvo;
@@ -783,24 +790,12 @@ article{
 		}
 
 		@include bp-desktop{
+			max-height: 0px;
 			display: none;
 		}
 	}
 
-	.open{
-		display: block;
-	}
-	
-	.close{
-		display: none;
-	}
 
-	@include bp-desktop{
-		.close{
-			display: block;
-		}
-		
-	}
 
 	article{
 		margin: 0px 20px 20px;
@@ -820,9 +815,16 @@ article{
 
 .panel{
 	@include subpage-aside;
-	margin: 20px 20px;
-	display: none;
+	// margin: 20px 20px;
+	// display: none;
 	overflow: hidden;
+	max-height: 0px;
+	padding: 0px;
+	// transition: max-height 0.3s;
+	transition-property: max-height, padding;
+	transition-duration: 0.3s, 0s;
+	transition-delay: 0s;
+
 
 	a {
 		@include links;
@@ -831,10 +833,33 @@ article{
 	@include bp-desktop{
 		display: block;
 		margin-top: -85px;
+		max-height: 1000px;
+		padding: 20px;
 	}
 
 	p.bordered{
 		border-bottom: 1px #888 solid;
 		padding-bottom: 10px;
+	}
+
+	&.open{
+		max-height: 1000px;
+		padding: 20px;
+	}
+	
+	&.close{
+		max-height: 0px;
+		padding: 0px;
+		transition-delay: 0s, 0.3s;
+		
+	}
+
+	@include bp-desktop{
+		&.close{
+			display: block;
+			max-height: 1000px;
+			padding: 20px;
+		}
+		
 	}
 }

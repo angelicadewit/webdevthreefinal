@@ -75,7 +75,7 @@ table {
 .mini-pic-size {
 	width: 81px;
 	height: 81px;
-	flex: 1;
+	flex-basis: 81px;
 }
 
 /* 1. Main Layout ================================= */
@@ -147,10 +147,9 @@ header .logo {
 	font-size: 30px;
 	text-transform: uppercase;
 	font-weight: bold;
-	padding: 20px 40px;
+	padding: 20px;
 	color: white;
 	text-align: center;
-	margin-bottom: 20px;
 	text-decoration: none;
 }
 
@@ -163,6 +162,10 @@ header .logo {
 }
 
 .logo span {
+	color: #C40000;
+}
+
+.hero-statement span {
 	color: #C40000;
 }
 
@@ -425,10 +428,15 @@ footer a {
 	margin-right: 40px;
 }
 
-.course img {
+.course .image {
 	margin-right: 13px;
 	width: 81px;
 	height: 81px;
+	flex-basis: 81px;
+}
+
+.course img {
+	width: 81px;
 }
 
 .course:last-child {
@@ -802,7 +810,6 @@ article h3 {
 	text-align: left;
 	border: none;
 	outline: none;
-	transition: 0.4s;
 }
 
 .about .accordion h2 {
@@ -816,21 +823,8 @@ article h3 {
 
 @media only screen and (min-width: 960px) {
 	.about .accordion {
+		max-height: 0px;
 		display: none;
-	}
-}
-
-.about .open {
-	display: block;
-}
-
-.about .close {
-	display: none;
-}
-
-@media only screen and (min-width: 960px) {
-	.about .close {
-		display: block;
 	}
 }
 
@@ -858,9 +852,12 @@ article h3 {
 	color: white;
 	margin: 20px 30px;
 	padding: 20px 30px;
-	margin: 20px 20px;
-	display: none;
 	overflow: hidden;
+	max-height: 0px;
+	padding: 0px;
+	transition-property: max-height, padding;
+	transition-duration: 0.3s, 0s;
+	transition-delay: 0s;
 }
 
 @media only screen and (min-width: 960px) {
@@ -907,12 +904,33 @@ article h3 {
 	.panel {
 		display: block;
 		margin-top: -85px;
+		max-height: 1000px;
+		padding: 20px;
 	}
 }
 
 .panel p.bordered {
 	border-bottom: 1px #888 solid;
 	padding-bottom: 10px;
+}
+
+.panel.open {
+	max-height: 1000px;
+	padding: 20px;
+}
+
+.panel.close {
+	max-height: 0px;
+	padding: 0px;
+	transition-delay: 0s, 0.3s;
+}
+
+@media only screen and (min-width: 960px) {
+	.panel.close {
+		display: block;
+		max-height: 1000px;
+		padding: 20px;
+	}
 }
 
 /*# sourceMappingURL=main.css.map */
