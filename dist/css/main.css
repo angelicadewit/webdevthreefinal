@@ -183,10 +183,12 @@ nav a {
 	border-left: 1px #595959 solid;
 	display: flex;
 	justify-content: center;
+	transition: background 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 }
 
 nav a:hover {
 	background: #000;
+	transition: background 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
 }
 
 nav a.active {
@@ -205,6 +207,12 @@ footer a {
 	text-decoration: none;
 	font-family: 'arial';
 	font-size: 16px;
+	display: inline-block;
+}
+
+footer a:hover {
+	transform: skewX(-20deg);
+	transition: .2s;
 }
 
 .home .hero {
@@ -309,7 +317,13 @@ footer a {
 	text-decoration: none;
 	font-family: 'arial';
 	font-size: 16px;
+	display: inline-block;
 	flex-basis: 60%;
+}
+
+.gelli-statement a:hover {
+	transform: skewX(-20deg);
+	transition: .2s;
 }
 
 @media only screen and (min-width: 960px) {
@@ -407,6 +421,12 @@ footer a {
 	text-decoration: none;
 	font-family: 'arial';
 	font-size: 16px;
+	display: inline-block;
+}
+
+.third-quarter .testimonial-link:hover {
+	transform: skewX(-20deg);
+	transition: .2s;
 }
 
 .course {
@@ -575,6 +595,16 @@ footer a {
 .link-box p {
 	color: white;
 	font-family: arial;
+}
+
+.link-box a {
+	display: inline-block;
+	transition: .2s;
+}
+
+.link-box a:hover {
+	transform: skewX(-15deg);
+	transition: .2s;
 }
 
 .link-box .description {
@@ -837,6 +867,12 @@ article h3 {
 	text-decoration: none;
 	font-family: 'arial';
 	font-size: 16px;
+	display: inline-block;
+}
+
+.about article a:hover {
+	transform: skewX(-20deg);
+	transition: .2s;
 }
 
 @media only screen and (min-width: 960px) {
@@ -898,6 +934,12 @@ article h3 {
 	text-decoration: none;
 	font-family: 'arial';
 	font-size: 16px;
+	display: inline-block;
+}
+
+.panel a:hover {
+	transform: skewX(-20deg);
+	transition: .2s;
 }
 
 @media only screen and (min-width: 960px) {
