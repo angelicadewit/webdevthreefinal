@@ -271,7 +271,7 @@ footer a{
 // HOME
 
 .home .hero{
-	background: url('/dist/img/aboutcherryblossom.jpg');
+	background: url('../img/aboutcherryblossom.jpg');
 	height: 500px;
 	
 	@include bp-desktop{
@@ -803,7 +803,7 @@ article{
 		width: 100%;
 		text-align: left;
 		border: none;
-		outline: none;
+		outline: none;	
 		
 		h2{
 			font-family: arvo;
